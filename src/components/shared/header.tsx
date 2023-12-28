@@ -1,5 +1,5 @@
-import NavMobile from "./nav-mobile";
-import Nav from "./nav";
+import NavMobile from "./navs/nav-mobile";
+import Nav from "./navs/nav";
 
 
 

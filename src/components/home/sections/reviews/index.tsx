@@ -4,19 +4,16 @@ import { Card } from "./card";
 
 export default function Reviews() {
   return (
-    <section className="w-full flex flex-col gap-y-16 items-center py-12  ">
-        <Title>What they´ve said</Title>
+    <section className="w-full flex flex-col gap-y-16 items-center py-12 mb-24 ">
+        <Title className="animate-fade-up">What they´ve said</Title>
         <section className="flex w-full justify-between items-center">
             <Card />
             <Card />
             <Card />
         </section>
-        <Button className="py-3 text-sm">
+        <Button className="py-3 text-sm animate-fade-up">
             Get Started
         </Button>
-      <div className=" ">
-
-      </div>
     </section>
   )
 }

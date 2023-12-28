@@ -1,18 +1,30 @@
 import Parragraph from "@/components/ui/parragraph";
+import { cn } from "@/utils/cn";
 
-export default function Card() {
+interface CardI {
+  title : string,
+  id : number,
+  description : string
+}
+
+interface CardProps {
+  card : CardI,
+  className? : string
+}
+
+export default function Card({ card, className } : CardProps) {
+
   return (
-    <article className="">
+    <article className={cn(``, className)}>
         <header className="flex items-center gap-x-2 lg:gap-x-4 bg-neutral-very-pale-red lg:bg-transparent">
-          <label className="bg-primary-bright-red text-white rounded-full font-medium px-6 py-2 text-sm">
-              01
+          <label className="bg-primary-bright-red text-white rounded-full font-medium px-6 py-2 text-sm animate-fade-up">
+              0{card.id}
           </label>
-          <h3 className="lg:text-lg font-bold text-primary-dark-blue ">Track company-wide progress</h3>
+          <h3 className="lg:text-lg font-bold text-primary-dark-blue animate-fade-left">{card.title}</h3>
         </header>
-        <main className=" pl-14 lg:pl-20">
+        <main className=" pl-14 lg:pl-20 animate-fade-left">
             <Parragraph className="lg:w-[28rem] pl-4 lg:pl-0">
-                See how your day-to-day tasks fit into the wider vision.
-                Go from tracking progress at the milestone level all the way done to the smallest of details. Never lose sight of the bigger picture again.
+                {card.description}
             </Parragraph>
         </main>
     </article>

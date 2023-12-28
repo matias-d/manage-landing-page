@@ -1,8 +1,8 @@
 "use client"
-import IconHamburger from "../icons/icon-hamburger";
-import IconClose from "../icons/icon-close";
+import IconHamburger from "../../icons/icon-hamburger";
+import IconClose from "../../icons/icon-close";
 import NavMenu from "./nav-menu";
-import Logo from "./logo";
+import Logo from "../logo";
 
 import { useState } from "react";
 
