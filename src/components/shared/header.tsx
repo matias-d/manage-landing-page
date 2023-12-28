@@ -1,22 +1,18 @@
-import Button from '../ui/button'
-import Link from 'next/link'
-import Logo from './logo'
+import NavMobile from "./nav-mobile";
+import Logo from "./logo";
+import Nav from "./nav";
+
 
 
 export default function Header() {
   return (
-    <header className='fixed top-0 left-0 w-full py-12 px-36 bg-neutral-very-light-gray'>
-        <nav className='w-full flex items-center justify-between '>
-            <Logo />
-            <ul className='flex items-center gap-x-8 text-primary-dark-blue text-sm font-medium'>
-                <li><Link href='#'>Pricing</Link></li>
-                <li><Link href='#'>Product</Link></li>
-                <li><Link href='#'>About Us</Link></li>
-                <li><Link href='#'>Careers</Link></li>
-                <li><Link href='#'>Community</Link></li>
-            </ul>
-            <Button>Get Started</Button>
-        </nav>
+    <header className='fixed top-0 left-0 w-full lg:pt-12 lg:pb-6 lg:px-36 px-6 lg:bg-neutral-very-light-gray z-50 py-12 '>
+      
+      <nav className='w-full flex items-center justify-between'>
+        <Nav />
+        <NavMobile />
+      </nav>
+       
     </header>
   )
 }

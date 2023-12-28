@@ -21,7 +21,11 @@ const config: Config = {
       },
       backgroundImage : {
         'pattern-desktop' : 'url(/images/bg-tablet-pattern.svg)',
-        'pattern-mobile' : 'url(/images/bg-simplify-section-mobile.svg)'
+        'pattern-mobile' : 'url(/images/bg-simplify-section-mobile.svg)',
+        'pattern-tablet' : 'url(/images/bg-simplify-section-desktop.svg)'
+      },
+      backgroundPosition : {
+        'bottom-4': 'left top 1rem',
       }
     },
   },
