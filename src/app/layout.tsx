@@ -1,5 +1,7 @@
-import { Be_Vietnam_Pro } from 'next/font/google'
+import Footer from '@/components/shared/footer'
 import Header from '@/components/shared/header'
+
+import { Be_Vietnam_Pro } from 'next/font/google'
 import type { Metadata } from 'next'
 import './globals.css'
 
@@ -22,6 +24,7 @@ export default function RootLayout({
         <main className='bg-pattern-desktop bg-no-repeat bg-right-top '>
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   )

@@ -20,7 +20,8 @@ const config: Config = {
          "neutral-very-light-gray": "hsl(0, 0%, 98%)",
       },
       backgroundImage : {
-        'pattern-desktop' : 'url(/images/bg-tablet-pattern.svg)'
+        'pattern-desktop' : 'url(/images/bg-tablet-pattern.svg)',
+        'pattern-mobile' : 'url(/images/bg-simplify-section-mobile.svg)'
       }
     },
   },
