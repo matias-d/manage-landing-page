@@ -15,8 +15,7 @@ export default function FooterForm() {
     type : 'INIT',
     message : ''
  })
-
-
+ const [value, setValue] = useState('')
 
  const resetForm = () => setForm({
     type : 'INIT',
@@ -26,10 +25,8 @@ export default function FooterForm() {
  const handleSubmit = (e : React.FormEvent<HTMLFormElement> ) => {
     e.preventDefault()
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    const inputValue = (e.target as HTMLFormElement).elements[0].value
 
-
-    if (!inputValue) {
+    if (!value) {
         setForm({
             type : 'ERROR',
             message : 'Please insert a email'
@@ -37,7 +34,7 @@ export default function FooterForm() {
         return
     }
 
-    if (!emailRegex.test(inputValue)) {
+    if (!emailRegex.test(value)) {
         setForm({
             type : 'ERROR',
             message : 'Please insert a email valid'
@@ -66,6 +63,7 @@ export default function FooterForm() {
                 placeholder="Updates in your inbox..."
                 type='text'
                 name='email'
+                onChange={(e) => setValue(e.target.value)}
             />
 
             {
