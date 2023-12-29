@@ -2,3 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
+.swiper-pagination-bullet {
+    background: hsl(12, 88%, 59%)!important;
+}

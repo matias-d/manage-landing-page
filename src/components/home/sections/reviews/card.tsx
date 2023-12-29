@@ -1,12 +1,24 @@
 import Parragraph from "@/components/ui/parragraph";
 import Image from "next/image";
 
-export function Card() {
+interface ReviewI {
+  name : string
+  review : string
+  id : number
+  avatar : string
+}
+
+interface CardProps {
+  review : ReviewI
+}
+
+
+export default function Card({ review } : CardProps) {
   return (
     <article className="flex flex-col gap-y-4 items-center">
-        <Image alt="lol" src='/images/avatar-ali.png' width='60' height='60' className="rounded-full object-cover"/>
-        <h4 className="font-bold text-primary-dark-blue">Anishi Li</h4>
-        <Parragraph className="text-center">We have been able to cancel so many other subscriptions since using Manager. There is no more corss-channel confusion and everyone is much more focused.</Parragraph>
+        <Image alt={`photo of ${review.name}`} src={review.avatar} width='60' height='60' className="rounded-full object-cover"/>
+        <h4 className="font-bold text-primary-dark-blue">{review.name}</h4>
+        <Parragraph className="text-center w-80 lg:w-auto">{review.review}</Parragraph>
     </article>
   )
 }
