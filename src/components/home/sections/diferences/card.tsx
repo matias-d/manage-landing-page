@@ -16,8 +16,8 @@ export default function Card({ card, className } : CardProps) {
 
   return (
     <article className={cn(``, className)}>
-        <header className="flex items-center gap-x-2 lg:gap-x-4 bg-neutral-very-pale-red lg:bg-transparent">
-          <label className="bg-primary-bright-red text-white rounded-full font-medium px-6 py-2 text-sm animate-fade-up">
+        <header className="flex items-center gap-x-2 lg:gap-x-4 bg-neutral-very-pale-red lg:bg-transparent rounded-full">
+          <label className="bg-primary-bright-red text-white rounded-full font-medium px-6 py-2 text-sm animate-fade-up ">
               0{card.id}
           </label>
           <h3 className="lg:text-lg font-bold text-primary-dark-blue animate-fade-left">{card.title}</h3>
