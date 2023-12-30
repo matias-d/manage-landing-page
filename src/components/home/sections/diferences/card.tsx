@@ -22,11 +22,11 @@ export default function Card({ card, className } : CardProps) {
           </label>
           <h3 className="lg:text-lg font-bold text-primary-dark-blue animate-fade-left">{card.title}</h3>
         </header>
-        <main className=" pl-14 lg:pl-20 animate-fade-left">
+        <section className=" pl-14 lg:pl-20 animate-fade-left">
             <Parragraph className="lg:w-[28rem] pl-4 lg:pl-0">
                 {card.description}
             </Parragraph>
-        </main>
+        </section>
     </article>
   )
 }
