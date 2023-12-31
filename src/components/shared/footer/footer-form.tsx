@@ -59,7 +59,7 @@ export default function FooterForm() {
         <div className='relative'>
             <input 
                 onFocus={resetForm}
-                className={`bg-neutral-very-light-gray px-4 py-2 rounded-full text-primary-dark-blue ${form.type === 'ERROR' ? 'border border-red-400' : form.type === 'SUCCESS' ? 'border border-green-400' : 'border-none'} outline-none text-sm`}
+                className={`bg-neutral-very-light-gray px-4 py-2 rounded-full text-primary-dark-blue ${form.type === 'ERROR' ? 'border border-red-400' : form.type === 'SUCCESS' ? 'border border-green-400' : ''} outline-none text-sm border focus:border-primary-bright-red`}
                 placeholder="Updates in your inbox..."
                 type='text'
                 name='email'
